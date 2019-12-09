@@ -1,0 +1,20 @@
+{
+  "extends": ["@ris/eslint-config/react", "plugin:@typescript-eslint/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "es6": true
+  },
+  "rules": {
+    "function-paren-newline": 0
+  },
+  "root": true,
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}

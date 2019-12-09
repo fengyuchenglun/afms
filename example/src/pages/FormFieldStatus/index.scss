@@ -1,0 +1,35 @@
+.form-field-status {
+  position: relative;
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    .head {
+      img {
+        border-radius: 100%;
+      }
+    }
+    .detail {
+      margin-left: 16px;
+      .name {
+        font-size: 26px;
+        line-height: 38px;
+        color: #000;
+      }
+      .more-info {
+        font-size: 12px;
+        line-height: 18px;
+        color: #4A4A4A;
+        margin-top: 6px;
+      }
+    }
+  }
+  .btn-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    .ant-btn {
+      width: 70px;
+    }
+  }
+}

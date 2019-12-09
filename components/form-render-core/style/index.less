@@ -1,0 +1,12 @@
+@import '../../style/themes/index';
+@import '~antd/es/style/themes/index';
+
+@form-render-core-prefix-cls: ~'@{afms-prefix}-form-render-core';
+
+.@{form-render-core-prefix-cls} {
+  &-preview {
+    .@{ant-prefix}-form-item {
+      margin-bottom: 0;
+    }
+  }
+}

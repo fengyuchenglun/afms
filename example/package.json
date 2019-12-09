@@ -1,0 +1,60 @@
+{
+  "name": "example",
+  "description": "A React App Project",
+  "version": "1.0.0",
+  "author": "beyondxgb",
+  "engines": {
+    "npm": ">=8.9.0"
+  },
+  "scripts": {
+    "start": "ris dev",
+    "add": "ris add",
+    "build": "ris build && rm -rf ../docs && mv build ../docs",
+    "analyze": "ris analyze",
+    "lint": "npm run check-types && eslint --ext .js,.jsx,.ts,.tsx src",
+    "lint:fix": "npm run lint --fix",
+    "stylelint": "stylelint \"src/**/*.{css,less,styl,scss,sass,sss}\"",
+    "stylelint:fix": "npm run stylelint --fix",
+    "check-types": "tsc"
+  },
+  "dependencies": {
+    "antd": "^3.25.2",
+    "history": "^4.10.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "@ris/babel-preset-react": "^1.0.4",
+    "@ris/cli": "^1.0.5",
+    "@ris/eslint-config": "^1.0.0",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-router-dom": "^5.1.2",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "babel-eslint": "^8.2.2",
+    "eslint": "^6.2.1",
+    "eslint-import-resolver-typescript": "^1.1.1",
+    "eslint-import-resolver-webpack": "^0.10.1",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "raw-loader": "^4.0.0",
+    "stylelint": "^8.4.0",
+    "stylelint-config-standard": "^18.0.0",
+    "typescript": "^3.7.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}

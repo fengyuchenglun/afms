@@ -1,0 +1,103 @@
+{
+  "name": "afms",
+  "version": "0.0.1",
+  "description": "ant design form render solution",
+  "keywords": [
+    "ant",
+    "component",
+    "components",
+    "design",
+    "framework",
+    "frontend",
+    "react",
+    "react-component",
+    "form",
+    "render",
+    "solution"
+  ],
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "src",
+    "lib",
+    "es",
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run compile && npm run dist",
+    "clean": "rimraf lib es dist coverage",
+    "check-types": "tsc --noEmit",
+    "compile": "antd-tools run compile",
+    "dist": "antd-tools run dist",
+    "lint": "npm run check-types && eslint --ext .js,.jsx,.ts,.tsx components",
+    "lint:fix": "npm run lint --fix",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "prepare": "npm run clean && npm run check-types && npm run lint && npm test",
+    "pub": "antd-tools run update-self && antd-tools run pub",
+    "pretest": "npm run build",
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
+    "test:cov": "npm test -- --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "beyondxgb@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "antd": ">=3.0.0",
+    "classnames": "^2.2.6",
+    "omit.js": "^1.0.2",
+    "prop-types": "^15.7.2"
+  },
+  "devDependencies": {
+    "@ant-design/tools": "^8.0.4",
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/node": "^7.6.1",
+    "@babel/plugin-external-helpers": "^7.2.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-typescript": "^7.6.0",
+    "@types/classnames": "^2.2.9",
+    "@types/jest": "^24.0.18",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.8.4",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
+    "antd-tools": "^7.7.1",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^5.16.0",
+    "eslint-config-react-app": "^4.0.1",
+    "eslint-import-resolver-typescript": "^1.1.1",
+    "eslint-plugin-flowtype": "^2.50.3",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "gh-pages": "^2.1.1",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.7.0",
+    "rimraf": "^2.6.3",
+    "typescript": "3.5.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --ext .js,.jsx,.ts,.tsx components",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
