@@ -1,6 +1,6 @@
 # Afms
 
-Ant Design form render solution. 
+[Ant Design](https://ant.design/) form render solution. 
 
 It helps you render a form easily through configuration data instead of using the original antd form api.
 
@@ -66,7 +66,7 @@ Then you can get a form like this:
 
 ![kk](https://gw.alicdn.com/tfs/TB1yQo.pHj1gK0jSZFuXXcrHpXa-2276-386.png)
 
-You can see more examples in [aa](http://www.baidu.com);
+You can see more examples in [this](https://beyondxgb.github.io/afms).
 
 
 ## API Reference
@@ -271,7 +271,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 There is a small problem that if you use configuration data to render a form, all form fields is imported. Because We don't know which form field will be used.
 
-If your application pursues high performance, you can use the method of assembling form fields, like this [example](https://www.baidu.com).
+If your application pursues high performance, you can use the method of assembling form fields, like this [example](https://beyondxgb.github.io/afms/#/assemble-form-field).
 
 We strongly recommend using [babel-plugin-import](https://github.com/ant-design/babel-plugin-import), which can convert the following code to the 'afms/es/xxx' way:
 
