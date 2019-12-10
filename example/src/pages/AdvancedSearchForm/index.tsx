@@ -127,7 +127,7 @@ const SimpleForm: React.FC = () => {
           formRef = c;
         }}
       />
-      <Row>
+      <Row style={{ marginBottom: '25px' }}>
         <Col span={24} style={{ textAlign: 'right' }}>
           <Button type="primary" onClick={handleSearch}>
             Search
