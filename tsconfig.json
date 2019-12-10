@@ -18,5 +18,5 @@
     "skipLibCheck": true,
     "resolveJsonModule": true
   },
-  "exclude": ["node_modules", "lib", "es", "example"]
+  "exclude": ["node_modules", "lib", "es", "example", "docs"]
 }
