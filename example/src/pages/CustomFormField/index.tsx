@@ -1,8 +1,8 @@
 import React from 'react';
 import { Form, Button } from 'antd';
 import { FormComponentProps } from 'antd/lib/form';
-import { FormRender } from '../../../../es';
-import { FormConfigProps } from '../../../../es/types';
+import { FormRender } from 'afms';
+import { FormConfigProps } from 'afms/es/types';
 import PriceInputField from 'components/fields/PriceInputField';
 
 const FormItem = Form.Item;

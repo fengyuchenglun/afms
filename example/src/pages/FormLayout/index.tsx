@@ -1,8 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import { Form, Button, Radio } from 'antd';
 import { FormComponentProps } from 'antd/lib/form';
-import { FormRender } from '../../../../es';
-import { FormConfigProps, FormLayout } from '../../../../es/types';
+import { FormRender } from 'afms';
+import { FormConfigProps, FormLayout } from 'afms/es/types';
 import { RadioChangeEvent } from 'antd/lib/radio';
 import './index.scss';
 

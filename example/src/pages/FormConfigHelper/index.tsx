@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Form, Button } from 'antd';
 import { FormComponentProps } from 'antd/lib/form';
-import { FormRender } from '../../../../es';
-import { FieldProps } from '../../../../es/types';
+import { FormRender } from 'afms';
+import { FieldProps } from 'afms/types';
 
 const FormItem = Form.Item;
 

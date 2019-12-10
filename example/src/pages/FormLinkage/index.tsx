@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Form, Button } from 'antd';
 import { FormComponentProps } from 'antd/lib/form';
 import { WrappedFormUtils } from 'antd/lib/form/Form';
-import { FormRender } from '../../../../es';
-import { FieldProps } from '../../../../es/types';
+import { FormRender } from 'afms';
+import { FieldProps } from 'afms/es/types';
 import { RadioChangeEvent } from 'antd/lib/radio';
 
 const FormItem = Form.Item;

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Form, Button, Row, Col, message } from 'antd';
 import { FormComponentProps } from 'antd/lib/form';
-import { FormRender } from '../../../../es';
-import { FormConfigProps, FieldStatus } from '../../../../es/types';
+import { FormRender } from 'afms';
+import { FormConfigProps, FieldStatus } from 'afms/es/types';
 import './index.scss';
 
 const FormItem = Form.Item;

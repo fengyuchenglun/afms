@@ -1,5 +1,9 @@
 # Afms
 
+[![npm version](https://img.shields.io/npm/v/afms.svg?colorB=007ec6&style=flat-square)](https://www.npmjs.com/package/afms)
+[![npm downloads](https://img.shields.io/npm/dm/afms.svg?style=flat-square)](https://www.npmjs.com/package/afms)
+[![license](https://img.shields.io/github/license/beyondxgb/afms.svg?style=flat-square)](https://github.com/beyondxgb/afms/blob/master/LICENSE)
+
 [Ant Design](https://ant.design/) form render solution. 
 
 It helps you render a form easily through configuration data instead of using the original antd form api.
@@ -75,7 +79,7 @@ You can see more examples in [this](https://beyondxgb.github.io/afms).
 
 | Property  | Description | Type | Default |
 | --- | --- | --- | --- |
-| config | The config of the FormRender, see more about in FormRender.Config | `Object` | - |
+| config | The config of the FormRender, see more about in [FormRender.Config](https://github.com/beyondxgb/afms#formrenderconfig) | `Object` | - |
 | data   | Values of the fields | `Object` | null |
 | onChange | Called when all fields value change | `(field, ..arg) => void` | null |
 | children | child element | `any` | - |
@@ -100,7 +104,7 @@ const formConfig = {...};
 | Property  | Description | Type | Default |
 | --- | --- | --- | --- |
 | status | The status of all fields, can be covered by field config | `'preview' 'disabled' 'readonly' 'none'` | 'edit' |
-| fields | Define form fields, it is a field array. Field detail config you can see in FormRender.Config.Field | `Array` | - |
+| fields | Define form fields, it is a field array. Field detail config you can see in [FormRender.Config.Field](https://github.com/beyondxgb/afms#formrenderconfigfield) | `Array` | - |
 | layout | Define form layout | `'horizontal' 'vertical' 'inline' 'multi-column'` | 'horizontal' |
 | column | Columns of `multi-clomun` layout | `number` | 1 |
 | gutter | Spacing between grids, could be a number or a object like { xs: 8, sm: 16, md: 24} | `Number Object Array` | 0 |

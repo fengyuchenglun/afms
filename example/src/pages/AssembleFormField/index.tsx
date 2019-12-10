@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Form, Button } from 'antd';
-import { FormRender, InputField, RadioField, FormRenderCore } from '../../../../es';
+import { FormRender, InputField, RadioField, FormRenderCore } from 'afms';
 import { FormComponentProps } from 'antd/lib/form';
 import PriceInputField from 'components/fields/PriceInputField';
-import { FormConfigProps } from '../../../../es/types';
+import { FormConfigProps } from 'afms/es/types';
 
 const FormItem = Form.Item;
 

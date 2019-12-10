@@ -21,7 +21,6 @@ class AppLayout extends React.Component<AppLayoutProps> {
     const { pathname } = this.props.location;
     const target = menuData.find((item: MenuItemProps) => item.name === pathname) || { name: '' };
     const page = pathname.replace(/\//, '');
-    console.log(target);
     return (
       <Layout className="app-layout">
         <Sider width={200} style={{ background: '#fff' }}>

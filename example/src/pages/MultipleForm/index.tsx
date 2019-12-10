@@ -1,8 +1,8 @@
 import React from 'react';
 import { Form, Button } from 'antd';
 import { FormComponentProps } from 'antd/lib/form';
-import { FormRender, FormRenderCore } from '../../../../es';
-import { FormConfigProps } from '../../../../es/types';
+import { FormRender, FormRenderCore } from 'afms';
+import { FormConfigProps } from 'afms/es/types';
 import './index.scss';
 
 const FormItem = Form.Item;
