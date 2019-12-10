@@ -1,5 +1,5 @@
 import React from 'react';
-import { BaseField } from '../../../../../es';
+import { BaseField } from 'afms';
 import PriceInput from './PriceInput';
 
 export default class PriceInputField extends BaseField {
