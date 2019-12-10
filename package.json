@@ -1,6 +1,6 @@
 {
   "name": "afms",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "ant design form render solution",
   "keywords": [
     "ant",
@@ -32,13 +32,8 @@
     "dist": "antd-tools run dist",
     "lint": "npm run check-types && eslint --ext .js,.jsx,.ts,.tsx components",
     "lint:fix": "npm run lint --fix",
-    "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "prepare": "npm run clean && npm run check-types && npm run lint && npm test",
-    "pub": "antd-tools run update-self && antd-tools run pub",
-    "pretest": "npm run build",
-    "test": "jest",
-    "test:watch": "npm test -- --watch",
-    "test:cov": "npm test -- --coverage"
+    "prepare": "npm run clean && npm run check-types && npm run lint && npm run build",
+    "pub": "node scripts/pub.js"
   },
   "repository": {
     "type": "git",
