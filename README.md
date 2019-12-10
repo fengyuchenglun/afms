@@ -82,9 +82,9 @@ You can see more examples in [this](https://beyondxgb.github.io/afms).
 | config | The config of the FormRender, see more about in [FormRender.Config](https://github.com/beyondxgb/afms#formrenderconfig) | `Object` | - |
 | data   | Values of the fields | `Object` | null |
 | onChange | Called when all fields value change | `(field, ..arg) => void` | null |
-| children | child element | `any` | - |
-| className | className of FormRender | `string` | - |
-| style | style of FormRender | `object` | - |
+| children | Child element | `any` | - |
+| className | ClassName of FormRender | `string` | - |
+| style | Style of FormRender | `object` | - |
 | needWrapFormRenderCore | Set if need div wrap for FormRenderCore | `boolean` | true |
 
 How to use: 
