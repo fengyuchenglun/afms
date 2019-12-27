@@ -201,6 +201,25 @@ It can use in the scene that there are many form modules:
 </FormRender>
 ```
 
+#### registerFormField
+
+```js
+import { FormRenderCore } from 'afms';
+
+FormRenderCore.registerFormField('price-input', PriceInputField);
+```
+
+#### registerFormFields
+
+```js
+import { FormRenderCore } from 'afms';
+
+FormRenderCore.registerFormFields({
+  'price-input': PriceInputField,
+  ...
+});
+```
+
 ### FormRender.FormConfig
 
 It helps you manipulate configuration data easily.

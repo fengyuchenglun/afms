@@ -13,6 +13,7 @@ import dynamicFormField from '!!raw-loader!../pages/DynamicFormField/index';
 import complexLayout from '!!raw-loader!../pages/ComplexLayout/index';
 import assembleFormField from '!!raw-loader!../pages/AssembleFormField/index';
 import formFields from '!!raw-loader!../pages/FormFields/index';
+import registerFormField from '!!raw-loader!../pages/RegisterFormField/index';
 
 export default {
   'basic': {
@@ -74,5 +75,9 @@ export default {
   'form-fields': {
     title: 'FormFields',
     code: [formFields],
+  },
+  'register-form-field': {
+    title: 'RegisterFormField',
+    code: [registerFormField],
   },
 }
