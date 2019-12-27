@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Button } from 'antd';
 import { FormComponentProps } from 'antd/lib/form';
-import { FormRender } from 'afms';
+import { FormRender, FormRenderCore } from 'afms';
 import { FormConfigProps } from 'afms/es/types';
 
 const FormItem = Form.Item;
@@ -53,7 +53,7 @@ const formConfig: FormConfigProps = {
       id: 'checkbox',
       defaultValue: ['Apples', 'Bananas'],
       formItem: {
-        label: 'checkbox',
+        label: 'Checkbox',
       },
       config: {
         options: [{ label: 'Apples', value: 'Apples' }, { label: 'Nails', value: 'Nails' }, { label: 'Bananas', value: 'Bananas' }],

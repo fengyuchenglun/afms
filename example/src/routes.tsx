@@ -21,6 +21,7 @@ import DynamicFormField from './pages/DynamicFormField';
 import ComplexLayout from './pages/ComplexLayout';
 import AssembleFormField from './pages/AssembleFormField';
 import FormFields from './pages/FormFields';
+import RegisterFormField from './pages/RegisterFormField';
 
 export interface RouteConfig {
   path: string;
@@ -100,6 +101,10 @@ const routeConfig: Array<RouteConfig> = [
       {
         path: '/form-fields',
         component: FormFields,
+      },
+      {
+        path: '/register-form-field',
+        component: RegisterFormField,
       }
     ],
   },

@@ -4,17 +4,19 @@
  *
  */
 
-import React from 'react';
+import React, { ComponentType } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Row, Col } from 'antd';
 import { ConfigConsumer } from 'antd/es/config-provider/context';
 import { FormItemProps } from 'antd/lib/form';
 import { ConfigConsumerProps } from 'antd/lib/config-provider';
-import fieldComponents from './components';
 import { EDIT } from '../utils/consts';
 import { defaultFormConfig } from '../form-render';
-import { FormRenderCoreProps, FieldProps, FormConfigProps } from '../types';
+import internalFields from './fields';
+import { FormRenderCoreProps, FieldProps, FormConfigProps, ComponentFieldType } from '../types';
+
+const fieldsMap: ComponentFieldType = {};
 
 function extendFieldConfig(item: FieldProps, props: FormRenderCoreProps) {
   const config = item.config || {};
@@ -49,6 +51,14 @@ function mergeFormItemConfig(config: FormConfigProps, formItem?: FormItemProps):
 class FormRenderCore extends React.PureComponent<FormRenderCoreProps> {
   static defaultProps = {}
   static propTypes = {}
+  static registerFormField = (name: string, field: ComponentType) => {
+    fieldsMap[name] = field;
+  }
+  static registerFormFields = (fields: ComponentFieldType = {}) => {
+    Object.keys(fields).forEach((name: string) => {
+      fieldsMap[name] = fields[name];
+    });
+  }
   getFormItems = () => {
     const { config = defaultFormConfig, form, data } = this.props;
     const { status, fields = [], emptyContent } = config;
@@ -74,7 +84,7 @@ class FormRenderCore extends React.PureComponent<FormRenderCoreProps> {
       fieldProps.config = extendFieldConfig(item, this.props);
       // 内置组件
       if (typeof field === 'string') {
-        const TargetComponent = fieldComponents[field];
+        const TargetComponent = fieldsMap[field];
         if (!TargetComponent) {
           throw new Error(`Field '${field} is not exsit, check the field name or custom your field.'`);
         }
@@ -140,6 +150,8 @@ class FormRenderCore extends React.PureComponent<FormRenderCoreProps> {
     );
   }
 }
+
+FormRenderCore.registerFormFields(internalFields);
 
 FormRenderCore.defaultProps = {
   form: {},

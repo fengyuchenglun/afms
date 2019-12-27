@@ -16,6 +16,9 @@ module.exports = {
     rules: [],
   },
   resolve: {
+    alias: {
+      afms: path.join(__dirname, '../../../'),
+    },
   },
   plugins: [],
 };

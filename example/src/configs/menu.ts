@@ -63,6 +63,10 @@ const menuData: Array<MenuItemProps> = [
   {
     name: '/form-fields',
     label: 'FormFields',
+  },
+  {
+    name: '/register-form-field',
+    label: 'RegisterFormField',
   }
 ];
 
